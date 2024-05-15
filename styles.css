@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7D26CD;
+}
+.navbar {
+    background-color: #4B0082; /* Donkerpaars */
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.navbar a {
+    float: left    ;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #7D26CD; /* Iets lichtere paars voor hover effect */
+    color: white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 20px; /* Voeg padding-top toe om rekening te houden met het vaste menu */
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    width: 80%;
+}
+.item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.item img {
+    width: 300px; /* Vergroot de afbeelding */
+    height: auto;
+    margin: 0 40px; /* Verplaats de afbeelding iets meer naar het midden */
+}
+.item div {
+    flex: 1;
+    font-size: 1.2em; /* Vergroot de tekst */
+}
+.item h2 {
+    font-size: 1.5em; /* Vergroot de koptekst */
+}
+.item p {
+    font-size: 1.2em; /* Vergroot de paragraaf tekst */
+}
+
+/* Mediaquery voor telefoonlay-out */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding-top: 160px; /* Voeg meer ruimte toe aan de bovenkant voor het vaste menu op telefoons */
+    }
+    .item img {
+        width: 200px; /* Verklein de afbeeldingen voor telefoons */
+        margin: 0; /* Verwijder de marge om de afbeeldingen in het midden te plaatsen */
+    }
+    .item div {
+        text-align: center; /* Centreer de tekst op telefoons */
+    }
+}
